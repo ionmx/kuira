@@ -55,6 +55,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Security audit application code
-        run: bin/brakeman -q -w2
+        run: bundle exec brakeman -q -w2
       - name: Lint Ruby files
         run: bin/rubocop --parallel
