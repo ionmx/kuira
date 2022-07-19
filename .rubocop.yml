@@ -20,7 +20,8 @@ AllCops:
   - 'tmp/**/*'
   - '.*'
   - 'db/schema.rb'
-  - gemfiles/vendor/bundle/**/*
+  - 'gemfiles/vendor/bundle/**/*'
+  - 'vendor/bundle/**/*'
 
 Rails:
   Enabled: true
