@@ -7,7 +7,7 @@ RSpec.describe('Home', type: :request) do
     it 'returns a succesful response' do
       get root_path
       expect(response).to be_successful
-    end 
+    end
 
     it 'include the correct text' do
       get root_path
