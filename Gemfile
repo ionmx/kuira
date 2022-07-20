@@ -43,3 +43,5 @@ group :test do
   gem 'webmock'
 end
 
+
+gem "devise", "~> 4.8"
