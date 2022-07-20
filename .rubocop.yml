@@ -26,6 +26,9 @@ AllCops:
 Rails:
   Enabled: true
 
+Rails/SchemaComment:
+  Enabled: false
+
 Rails/UnknownEnv:
   Environments:
     - production
