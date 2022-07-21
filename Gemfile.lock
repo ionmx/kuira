@@ -249,6 +249,10 @@ GEM
     stimulus-rails (1.1.0)
       railties (>= 6.0.0)
     strscan (3.0.3)
+    tailwindcss-rails (2.0.10-x86_64-darwin)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.10-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.1)
     timecop (0.9.5)
     timeout (0.3.0)
@@ -303,6 +307,7 @@ DEPENDENCIES
   shoulda-matchers
   sprockets-rails
   stimulus-rails
+  tailwindcss-rails (~> 2.0)
   timecop
   turbo-rails
   tzinfo-data
