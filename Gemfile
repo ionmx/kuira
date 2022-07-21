@@ -20,6 +20,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   gem "brakeman"
+  gem 'simplecov', require: false
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "factory_bot_rails"
   gem "faker"
