@@ -20,7 +20,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   gem "brakeman"
-  gem 'simplecov', require: false
+  gem "capybara"
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "factory_bot_rails"
   gem "faker"
@@ -31,6 +31,8 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+  gem 'selenium-webdriver'
+  gem 'simplecov', require: false
 end
 
 group :development do

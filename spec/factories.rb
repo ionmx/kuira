@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  # factory :user do
-  # end
 
-  # Define your factories here.
+  factory :user do
+    name { Faker::Name.name }
+    email { Faker::Internet.email }
+    password { Faker::Internet.password }
+  end
+  
 end
