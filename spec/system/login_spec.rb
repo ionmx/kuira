@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe 'Login', type: :system do
+RSpec.describe('Login', type: :system) do
   let(:user) { create(:user) }
 
   it 'can login' do
