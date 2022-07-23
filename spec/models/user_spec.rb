@@ -5,22 +5,16 @@ require 'rails_helper'
 RSpec.describe(User, type: :model) do
   describe 'validations' do
     describe 'name' do
-      it 'must be present' do
-        user = described_class.new(name: nil, email: Faker::Internet.email, password: Faker::Internet.password)
-        expect(user).to be_invalid
-      end
+      it { is_expected.to validate_presence_of(:name) }
     end
 
     describe 'email' do
-      it 'must be present' do
-        user = described_class.new(name: Faker::Name, email: nil, password: Faker::Internet.password)
-        expect(user).to be_invalid
-      end
+      subject { create(:user) }
 
-      it 'must be valid email' do
-        user = described_class.new(name: Faker::Name, email: 'invalid_email', password: Faker::Internet.password)
-        expect(user).to be_invalid
-      end
+      it { is_expected.to validate_presence_of(:email) }
+      it { is_expected.to validate_uniqueness_of(:email).ignoring_case_sensitivity }
+      it { is_expected.to allow_value(Faker::Internet.email).for(:email) }
+      it { is_expected.not_to(allow_value('invalid_email').for(:email)) }
     end
   end
 end
