@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :space do
-    title { 'MyString' }
+    title { Faker::Lorem.sentence }
     user { create(:user) }
   end
 end
