@@ -3,14 +3,14 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 
-require_relative 'support/factory_bot'
-require_relative 'support/chrome'
-require_relative 'support/shoulda_matchers'
-
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
+require_relative 'support/factory_bot'
+require_relative 'support/chrome'
+require_relative 'support/shoulda_matchers'
+require_relative 'support/devise'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
