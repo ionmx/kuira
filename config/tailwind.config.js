@@ -7,7 +7,7 @@ module.exports = {
     './app/javascript/**/*.js',
     './app/views/**/*.html.erb',
     './app/views/devise/sessions/**/*.html.erb',
-    './app/views/**/*.{erb,haml,html,slim}'
+    './app/views/**/*.{erb,haml,html,slim}',
   ],
   mode: 'jit',
   theme: {
