@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kuira</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="w-screen min-h-full flex">
+      <div class="bg-red-400 w-1/3 min-h-full flex pt-48 justify-center">
+        <div class="text-center text-white">
+          <span class="text-8xl font-extrabold text-shadow">KUIRA</span><br>
+          Project Management made easy
+        </div>
+      </div>
+      <div class="w-2/3">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
