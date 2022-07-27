@@ -22,7 +22,7 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="py-2">
         <%= f.label :email, class: "font-bold" %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full" %><br/>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full", tabindex: 1 %><br/>
       </div>
       <div class="py-2">
         <%= f.label :password, class: "font-bold" %>
@@ -31,14 +31,14 @@
         <% end %>
         <br />
 
-        <%= f.password_field :password, autocomplete: "current-password", class: "w-full" %><br/>
+        <%= f.password_field :password, autocomplete: "current-password", class: "w-full", tabindex: 2 %><br/>
       </div>
       <% if devise_mapping.rememberable? %>
-        <%= f.check_box :remember_me %>
+        <%= f.check_box :remember_me, tabindex: 3 %>
         <%= f.label :remember_me %><br/>
       <% end %>
       <div class="py-2">
-        <%= f.submit "Log in", class: "bg-red-500 text-white p-2 rounded hover:cursor-pointer"  %>
+        <%= f.submit "Log in", class: "bg-red-500 text-white p-2 rounded hover:cursor-pointer", tabindex: 4 %>
       </div>
     <% end %>
   </div>
