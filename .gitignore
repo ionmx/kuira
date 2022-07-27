@@ -38,3 +38,6 @@ coverage
 
 # Ignore RSpec status file.
 spec/examples.txt
+
+# Ignore node_modules.
+node_modules
